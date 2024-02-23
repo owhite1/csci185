@@ -58,6 +58,9 @@ font-weight: 400;
 text-transform: uppercase;
 text-align: center;
 }
+#header > img{
+    width: 180px;
+}
 h1, .landing{
     color: black;
 line-height: 1.2em;
