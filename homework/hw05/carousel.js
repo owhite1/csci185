@@ -10,40 +10,52 @@ const photos = [
     "images/img9-600x400.jpg",
     "images/img10-600x400.jpg" //9
 ];
+//create a bucket called idx and put the number zero in it
 let idx = 0;
 
 function showImage() {
-    console.log('Show image:' , idx);
+    //prints a sentence to the console (when you inspect)
+    console.log('Show image:', idx);
+    // lets me take img from html
     const img = document.querySelector("#the_image");
+    //set the img tag source to photo stored in slot idx
     img.src = photos[idx];
+    //let me take caption paragraph from html
+    const caption = document.querySelector(".caption");
+    caption.innerHTML = ` Image ${idx+1} out of 10`;
 
-    
-    //also target the caption text and change it too!
-    
+
+
 }
 
 function forward() {
-    idx += 1;
-    showImage();
-if (idx -= 1 < canvasWidth){
-    idx -= 1 = 0;
-}
+    //take whatever value is in idx add one to it and put it back in idx
     
-    }
-    
+    if (idx === 9) {
+        idx = 0;
 
-    //return???
-    // if statment ( if > then)
-    //if it gets to 9, set it to 0
+    }
+    else {
+        idx += 1;
+    }
+    showImage();
+}
+
+
 
 
 function back() {
-   idx -= 1;
-    showImage();
-    if (idx -= 1 < 0){
-        idx -= 1 = canvasWidth;
+    
+   
+    if (idx === 0) {
+        idx = 9;
     }
+    else{
+        idx -= 1;
+    }
+    showImage();
 
- 
-    //if it gets less than 0, set it to 9
 }
+
+
+
