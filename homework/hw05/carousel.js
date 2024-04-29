@@ -25,21 +25,25 @@ function showImage() {
 function forward() {
     idx += 1;
     showImage();
-    if (idx +=1 > canvasWidth) {
-        idx += 1 = 0;
+if (idx -= 1 < canvasWidth){
+    idx -= 1 = 0;
+}
+    
     }
     
 
     //return???
     // if statment ( if > then)
     //if it gets to 9, set it to 0
-}
+
 
 function back() {
    idx -= 1;
     showImage();
- if (idx -= 1 < 0) {
-    idx -= 1 = canvasWidth
- }
+    if (idx -= 1 < 0){
+        idx -= 1 = canvasWidth;
+    }
+
+ 
     //if it gets less than 0, set it to 9
 }
